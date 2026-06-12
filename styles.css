@@ -608,6 +608,41 @@ h1 span {
   border-block: 1px solid var(--line);
 }
 
+.founder-intro {
+  display: grid;
+  gap: 22px;
+  align-content: start;
+}
+
+.founder-photo {
+  width: min(420px, 100%);
+  margin: 0;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255, 209, 92, 0.12), transparent 34%),
+    linear-gradient(315deg, rgba(24, 230, 255, 0.14), transparent 38%),
+    rgba(5, 7, 13, 0.82);
+  padding: 12px;
+  box-shadow: var(--shadow), 0 0 48px rgba(24, 230, 255, 0.1);
+}
+
+.founder-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  filter: saturate(1.12) contrast(1.05);
+}
+
+.founder-photo figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
 .proof-cards {
   display: grid;
   grid-template-columns: 1fr;
