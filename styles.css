@@ -694,6 +694,32 @@ h1 span {
   margin-bottom: 0;
 }
 
+.contact-cta {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 16px;
+  box-shadow: inset 0 0 28px rgba(24, 230, 255, 0.08);
+}
+
+.contact-cta span {
+  color: var(--cyan);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.contact-cta a {
+  color: var(--ink);
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: clamp(1rem, 1.7vw, 1.45rem);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
