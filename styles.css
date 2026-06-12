@@ -371,7 +371,8 @@ h1 span {
 .solution-band p,
 .status p,
 .innovation-grid p,
-.proof-stack p {
+.proof-stack p,
+.proof-cards p {
   color: var(--muted);
   line-height: 1.68;
 }
@@ -512,7 +513,7 @@ h1 span {
 .flow span,
 .innovation-grid article,
 .status,
-.proof-grid span {
+.proof-cards article {
   border: 1px solid var(--line);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 38%),
@@ -566,19 +567,40 @@ h1 span {
   border-block: 1px solid var(--line);
 }
 
-.proof-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
+.proof-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 22px;
 }
 
-.proof-grid span {
-  padding: 9px 11px;
-  color: var(--ink);
-  font-size: 0.78rem;
+.proof-cards article {
+  padding: 18px;
+}
+
+.proof-cards span {
+  color: var(--cyan);
+  font-size: 0.74rem;
   font-weight: 900;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
+}
+
+.proof-cards h3 {
+  margin: 12px 0 8px;
+  font-size: clamp(1.28rem, 2.1vw, 2rem);
+  line-height: 1;
+}
+
+.proof-cards p {
+  margin-bottom: 0;
+}
+
+.proof-cards a {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--gold);
+  font-weight: 900;
 }
 
 .status {
