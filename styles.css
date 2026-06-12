@@ -352,9 +352,12 @@ h1 span {
 }
 
 .finish-strip span {
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--check-color) 64%, transparent);
   padding: 8px 10px;
-  background: rgba(255, 255, 255, 0.04);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--check-color) 24%, transparent), rgba(255, 255, 255, 0.035));
+  color: color-mix(in srgb, var(--check-color) 82%, white);
+  box-shadow: inset 0 0 22px color-mix(in srgb, var(--check-color) 14%, transparent), 0 0 18px color-mix(in srgb, var(--check-color) 10%, transparent);
 }
 
 .section {
