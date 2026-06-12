@@ -391,10 +391,122 @@ h1 span {
   margin-bottom: 26px;
 }
 
+.section-heading.wide {
+  max-width: 1040px;
+}
+
 .flow {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
+}
+
+.opportunity {
+  border-bottom: 1px solid var(--line);
+}
+
+.market-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 38%),
+    linear-gradient(180deg, var(--panel), rgba(7, 9, 17, 0.72));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(24px);
+}
+
+.market-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.market-table th,
+.market-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.market-table th {
+  color: var(--cyan);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.market-table td {
+  color: var(--muted);
+  line-height: 1.48;
+}
+
+.market-table td:first-child {
+  color: var(--ink);
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.market-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.market-table .phatso-row td {
+  background: rgba(24, 230, 255, 0.06);
+}
+
+.market-table .phatso-row td:first-child {
+  color: var(--green);
+}
+
+.advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.advantage-grid article {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 38%),
+    linear-gradient(180deg, var(--panel), rgba(7, 9, 17, 0.72));
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.advantage-grid span {
+  color: var(--cyan);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.advantage-grid strong {
+  margin: 18px 0 12px;
+  color: var(--ink);
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  line-height: 0.94;
+}
+
+.advantage-grid p,
+.source-note {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.source-note {
+  max-width: 980px;
+  margin: 18px 0 0;
+  font-size: 0.86rem;
 }
 
 .flow span,
@@ -517,7 +629,8 @@ h1 span {
   }
 
   .flow,
-  .innovation-grid {
+  .innovation-grid,
+  .advantage-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -539,7 +652,8 @@ h1 span {
 
   .track-grid,
   .flow,
-  .innovation-grid {
+  .innovation-grid,
+  .advantage-grid {
     grid-template-columns: 1fr;
   }
 
